@@ -1,0 +1,402 @@
+/* --------------- This is the CSS File containing all the styling contents of the webpage 'index.html' ----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ------------------------------- CSS Variables for toggling between Dark Mode and Light Mode ------------------------ */
+
+/* :root{
+    --primary-color: #fff;
+    --secondary-color: #202124;
+}
+
+.darktheme{
+    --primary-color: #202124;
+    --secondary-color: #fff;
+} */
+
+section{
+    height: 100vh;
+    padding: 20px 0px;
+}
+
+/* ---------------------------------------------Header Navigation Bar --------------------------------------------------*/
+
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgb(100 94 94 / 70%);
+}
+
+header a{
+    text-decoration: none;
+    color: #111;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header a:hover{
+    color: #111;
+}
+
+header span{
+    color: orange;
+}
+
+header .navigation{
+    position: relative;
+    display: flex;
+}
+
+header .navigation li{
+    list-style: none;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.navigation li .form-select{
+    outline: none;
+    cursor: pointer;
+}
+
+.navigation li .mode{
+    border: none;
+    padding: 10px;
+    background-color: #fff;
+}
+
+#menu{
+    width: 30px;
+    font-size: 20px;
+    background-color: #fff;
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/* ------------------------------------------ Vertical Fixed Navbar ----------------------------------------------------*/
+
+.vnav{
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+}
+
+.vnav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.vnav ul li{
+    list-style: none;
+    margin: 5px 0;
+}
+
+.vnav ul li a{
+    width: 40px;
+    height: 40px;
+    line-height: 50px;
+    font-size: 25px;
+    color: #fff;
+    background: #16a085;
+    display: block;
+    text-align: center;
+}
+
+.vnav ul li a span{
+    position: absolute;
+    right: 0;
+    width: 140px;
+    height: 50px;
+    color: #000;
+    background: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: -1;
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: 0.5s;
+    box-shadow: 0 4px 10px rgb(100 94 94 / 70%);
+}
+
+.vnav ul li:hover span{
+    opacity: 1;
+    backface-visibility: visible;
+    right: 50px;
+}
+
+/* ---------------------------------------------------- Canvas ---------------------------------------------------------*/
+
+.canva{
+    width: 90%;
+    height: 80%;
+    margin: 30px auto;
+    border: 2px solid #111;
+}
+
+.canva video{
+    width: 100%;
+    height: -webkit-fill-available;
+}
+/* ---------------------------------------------------- Banner ---------------------------------------------------------*/
+.banner{
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.left-banner{
+    width: 49%;
+}
+
+.right-banner{
+    width: 49%;
+}
+
+.banner-heading{
+    text-align: justify;
+    font-size: 48px;
+}
+
+.banner-heading span{
+    color: orange;
+    font-size: 36px;
+}
+
+.left-banner .banner-para{
+    font-family: 'Cookie', cursive;
+    font-style: italic;
+    letter-spacing: 0.2px;
+    font-size: 30px;
+}
+
+.left-banner .banner-info{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 36px;
+}
+
+.left-banner .banner-info i{
+    color: crimson;
+}
+
+.left-banner .banner-info b{
+    color: blue;
+}
+
+.left-banner a .banner-visualize{
+    width: 45%;
+    height: 50px;
+    margin: 10px 0px;
+    padding: 5px 8px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(214, 14, 214);
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    transition: 0.5s ease-out;
+}
+
+.left-banner a .banner-visualize:hover{
+    letter-spacing: 3px;
+    transition: 0.5s ease-in-out;
+}
+
+.banner-frames{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+/* --------------------------------------------- Algorithm Information -------------------------------------------------*/
+
+.sort{
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.left{
+    width: 69%;
+}
+
+.left p{
+    text-align: justify;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.left p span{
+    color: orange;
+}
+
+.right{
+    width: 39%;
+    margin: 30px 25px;
+}
+
+h2{
+    text-align: center;
+}
+
+.hr-algo{
+    width: 90%;
+    margin: 0px auto;
+    border: 3px solid crimson;
+}
+
+.frames{
+    width: 100%;
+    height: 80%;
+    cursor: pointer;
+}
+
+.algo-name{
+    font-weight: 1000;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+
+.algo-performance{
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    color: rgb(8, 189, 128);
+}
+
+.algo-name .fa{
+    margin-right: 10px;
+}
+
+.left p .algo-more{
+    width: 25%;
+    height: 40px;
+    margin: 10px 0px;
+    padding: 5px 8px;
+    border: none;
+    background-color: crimson;
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+/* ----------------------------------------------- Media Queries -------------------------------------------------------*/
+
+@media (max-width: 1030px){
+
+    /* ------------------------------------------- Header Navigation Bar -----------------------------------------------*/
+
+    #menu{
+        display: block;
+        align-items: center;
+
+    }
+
+    header{
+        justify-content: space-between;
+    }
+
+    header .navigation{
+        position: fixed;
+        flex-direction: column;
+        width: 40%;
+        height: 100vh;
+        background-color: whitesmoke;
+        top: 58px;
+        left: 0;
+        padding: 0;
+    }
+
+    header .navigation li{
+        margin: 20px;
+    }
+
+    header .navigation li button{
+        width: 100%;
+    }
+
+    #check:checked ~ul{
+        width: 0;
+        display: none;
+    }
+}
+
+@media (max-width: 425px){
+
+    header a, #menu{
+        font-size: 20px;
+    }
+
+    header .navigation{
+        position: fixed;
+        flex-direction: column;
+        width: 50%;
+        height: 100vh;
+        background-color: whitesmoke;
+        top: 50px;
+        left: 0;
+        padding: 0;
+    }
+}
+
+@media (max-width: 375px){
+
+
+    header a, #menu{
+        font-size: 18px;
+    }
+
+    header .navigation{
+        position: fixed;
+        flex-direction: column;
+        width: 60%;
+        height: 100vh;
+        background-color: whitesmoke;
+        top: 47px;
+        left: 0;
+        padding: 0;
+    }
+
+}
+
+@media (max-width: 320px){
+    
+    header a, #menu{
+        font-size: 16px;
+    }
+
+    header .navigation{
+        position: fixed;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+        background-color: whitesmoke;
+        top: 44px;
+        left: 0;
+        padding: 0;
+    }
+
+}
