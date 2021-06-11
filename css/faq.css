@@ -136,6 +136,7 @@ header .navigation li{
 }
 
 .vnav ul li:hover span{
+    z-index: 1000;
     opacity: 1;
     backface-visibility: visible;
     right: 50px;
@@ -210,11 +211,11 @@ h3{
 /* --------------------------------------------------- Contact Us ------------------------------------------------------*/
 
 .row{
+    display: flex;
+    justify-content: space-between;
     position: relative;
     width: 100%;
     height: 90%;
-    display: flex;
-    justify-content: space-between;
 }
 
 .row .col-md-50{
@@ -292,6 +293,10 @@ h3{
     resize: none;
 }
 
+.contactForm .inputBox textarea{
+    resize: none;
+}
+
 .contactForm .inputBox select{
     width: 50%;
     border: 1px solid #255;
@@ -299,7 +304,7 @@ h3{
     color: #111;
 }
 
-.btn{
+.contact .row .contactForm .btn{
     font-size: 20px;
     color: #fff;
     background: #ff0157;
@@ -322,7 +327,7 @@ h3{
     flex-direction: column;
 }
 
-.menu .title .titleText{
+.contact .title .titleText{
     text-transform: uppercase;
     letter-spacing: 0.5px;
     padding: 15px;
@@ -335,9 +340,8 @@ h3{
 /* --------------------------------------------------- Copyright ------------------------------------------------------*/
 
 .copyright{
-    margin-top: 130px;
     height: fit-content;
-    padding: 8px 40px;
+    padding: 10px;
     border-top: 1px solid rgba(0, 0, 0, 0.1);
     text-align: center;
     background-color: whitesmoke;
@@ -352,35 +356,4 @@ h3{
     color: #ff0157;
     text-decoration: none;
     font-weight: bold;
-}
-
-.icons{
-    display: flex;
-    justify-content: space-around;
-}
-
-.copyright .icons i{
-    font-size: 36px;
-    /* margin-right: 10px; */
-    cursor: pointer;
-}
-
-.copyright .icons .fa-linkedin-square{
-    color: #0077b5;
-}
-
-.copyright .icons .fa-github{
-    color: #211F1F;
-}
-
-.copyright .icons .fa-quora{
-    color: rgb(187, 0, 0);
-}
-
-.copyright .icons .fa-whatsapp{
-    color: #25D366;
-}
-
-.copyright .icons .fa-telegram{
-    color: #0088cc
 }
