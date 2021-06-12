@@ -24,7 +24,7 @@
 section{
     width: 90%;
     margin: 30px auto;
-    height: 90vh;
+    /* height: 90vh; */
     padding: 20px 0px;
 }
 
@@ -356,4 +356,553 @@ h3{
     color: #ff0157;
     text-decoration: none;
     font-weight: bold;
+}
+
+@media (max-width: 1440px){
+
+    section{
+        height: auto;
+    }
+
+    section .faq{
+        font-size: 18px;
+        line-height: 20px;
+        text-align: justify;
+        width: 95%;
+    }
+}
+
+@media (max-width: 1030px){
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    header{
+        align-items: center;
+    }
+
+    header a, #menu{
+        font-size: 20px;
+    }
+
+    header .navigation {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    /* -- Accordian -- */
+
+    section{
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    section h2{
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .accordion .accordion-item{
+        width: 100%;
+        margin: 20px 3px;
+    }
+
+    .accordion .accordion-item .accordion-item-header{
+        padding: 5px 45px 5px 5px;
+        font-size: 10px;
+    }
+
+    .accordion .accordion-item-body-content{
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    section h3{
+        padding: 10px 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    section .faq{
+        font-size: 12px;
+        line-height: 20px;
+        text-align: justify;
+        width: 95%;
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 49%;
+    }
+
+    .row .col-md-50 .title {
+        top: -12%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: block;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
+    /* Copyright */
+
+    .copyright p {
+        font-size: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+}
+
+@media (max-width: 425px){
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header a, #menu{
+        font-size: 20px;
+    }
+
+    header .navigation {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    /* -- Accordian -- */
+
+    section{
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    section h2{
+        font-size: 15px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .accordion .accordion-item{
+        width: 90%;
+        margin: 20px 3px;
+    }
+
+    .accordion .accordion-item .accordion-item-header{
+        padding: 5px 45px 5px 5px;
+        font-size: 10px;
+    }
+
+    .accordion .accordion-item-body-content{
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    section h3{
+        padding: 10px 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    section .faq{
+        font-size: 12px;
+        line-height: 20px;
+        text-align: justify;
+        width: 90%;
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 100%;
+    }
+
+    .row .col-md-50 .title {
+        top: -12%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: none;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
+    /* Copyright */
+
+    .copyright p {
+        font-size: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+}
+
+@media (max-width: 375px){
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header a, #menu{
+        font-size: 20px;
+    }
+
+    header .navigation {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    /* -- Accordian -- */
+
+    section{
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    section h2{
+        font-size: 15px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .accordion .accordion-item{
+        width: 90%;
+        margin: 20px 3px;
+    }
+
+    .accordion .accordion-item .accordion-item-header{
+        padding: 5px 45px 5px 5px;
+        font-size: 10px;
+    }
+
+    .accordion .accordion-item-body-content{
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    section h3{
+        padding: 10px 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    section .faq{
+        font-size: 12px;
+        line-height: 20px;
+        text-align: justify;
+        width: 90%;
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 100%;
+    }
+
+    .row .col-md-50 .title {
+        top: -12%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: none;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
+    /* Copyright */
+
+    .copyright p {
+        font-size: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+}
+
+@media (max-width: 320px){
+
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header a, #menu{
+        font-size: 20px;
+    }
+
+    header .navigation {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    /* -- Accordian -- */
+
+    section{
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    section h2{
+        font-size: 15px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .accordion .accordion-item{
+        width: 90%;
+        margin: 20px 3px;
+    }
+
+    .accordion .accordion-item .accordion-item-header{
+        padding: 5px 45px 5px 5px;
+        font-size: 10px;
+    }
+
+    .accordion .accordion-item-body-content{
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    section h3{
+        padding: 10px 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    section .faq{
+        font-size: 12px;
+        line-height: 20px;
+        text-align: justify;
+        width: 80%;
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 100%;
+    }
+
+    .row .col-md-50 .title {
+        top: -12%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: none;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
+    /* Copyright */
+
+    .copyright p {
+        font-size: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+
 }
