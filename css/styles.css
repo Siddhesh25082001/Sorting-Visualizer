@@ -26,18 +26,19 @@ section{
     padding: 20px 0px;
 }
 
-/* ---------------------------------------------Header Navigation Bar --------------------------------------------------*/
+/* --------------------------------------------Header Navigation Bar --------------------------------------------------*/
 
 header{
-    position: sticky;
+    /* position: sticky; */
     top: 0;
     left: 0;
     width: 100%;
     padding: 10px 30px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     box-shadow: 0 4px 10px rgb(100 94 94 / 70%);
-    background-color: rgb(255, 255, 255);
+    background-color:rgb(255, 255, 255);
 }
 
 header a{
@@ -89,7 +90,7 @@ header .navigation li{
     display: none;
 }
 
-/* ------------------------------------------ Vertical Fixed Navbar ----------------------------------------------------*/
+/* ----------------------------------------- Vertical Fixed Navbar ----------------------------------------------------*/
 
 .vnav{
     position: fixed;
@@ -141,7 +142,11 @@ header .navigation li{
     right: 50px;
 }
 
-/* ---------------------------------------------------- Canvas ---------------------------------------------------------*/
+/* --------------------------------------------------- Canvas ---------------------------------------------------------*/
+
+/* #canvas{
+    margin-top: 130px;
+} */
 
 .canva{
     width: 90%;
@@ -155,8 +160,10 @@ header .navigation li{
     height: -webkit-fill-available;
 }
 /* ---------------------------------------------------- Banner ---------------------------------------------------------*/
+
 .banner{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     width: 90%;
     margin: 20px auto;
@@ -164,6 +171,10 @@ header .navigation li{
 
 .left-banner{
     width: 49%;
+}
+
+#mobile{
+    display: none;
 }
 
 .right-banner{
@@ -230,9 +241,10 @@ header .navigation li{
 }
 
 
-/* --------------------------------------------- Algorithm Information -------------------------------------------------*/
+/* -------------------------------------------- Algorithm Information -------------------------------------------------*/
 
 #main{
+    /* margin-top: 130px; */
     height: auto;
 }
 
@@ -309,7 +321,11 @@ h2{
     letter-spacing: 2px;
 }
 
-/* --------------------------------------------------- Contact Us ------------------------------------------------------*/
+/* -------------------------------------------------- Contact Us ------------------------------------------------------*/
+
+/* #contact{
+    margin-top: 130px;
+} */
 
 .contact{
     width: 90%;
@@ -466,11 +482,18 @@ h2{
     font-weight: bold;
 }
 
-/* ----------------------------------------------- Media Queries -------------------------------------------------------*/
+/* -------------------------------------------- Media Queries -------------------------------------------------------*/
+
+@media (max-width: 1440px){
+
+    section{
+        height: auto;
+    }
+}
 
 @media (max-width: 1030px){
 
-    /* ------------------------------------------- Header Navigation Bar -----------------------------------------------*/
+    /* -- Header Navigation Bar --*/
 
     #menu{
         display: block;
@@ -481,6 +504,164 @@ h2{
     header{
         justify-content: space-between;
     }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 35px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Banner -- */
+
+    #banner{
+        padding: 0;
+        height: auto;
+    }
+
+    .banner{
+        margin: 35px auto;
+        flex-direction: column;
+    }
+
+    .left-banner, .right-banner{
+        width: 90%;
+    }
+
+    .banner-heading {
+        font-size: 36px;
+    }
+
+    .banner-heading span {
+        font-size: 25px;
+    }
+
+    .left-banner .banner-para{
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    .left-banner .banner-info {
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .left-banner a .banner-visualize {
+        width: 30%;
+        height: 30px;
+        margin: -10px 0px 10px 0px;
+        font-size: 13px;
+    }
+
+    #mobile{
+        display: block;
+    }
+
+    .right-banner{
+        display: none;
+    }
+
+    /* -- Canvas -- */
+
+    #canvas{
+        height: auto;
+        width: 90%;
+    }
+
+    .canva{
+        width: 88%;
+    }
+
+    /* -- Algo Information -- */
+
+    .left{
+        width: 69%
+    }
+
+    .right{
+        width: 39%;
+        height: auto;
+    }
+
+    .left p {
+        padding: 5px 0;
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 0px;
+    }
+
+    .left p .algo-more {
+        width: 60%;
+        height: 36px;
+    }
+
+    .hr-algo{
+        width: 80%;
+    }
+
+    hr{
+        height: 5px;
+        margin: 15px 0px;
+        background-color: crimson;
+    }
+
+    .left p span {
+        color: orange;
+        padding: 0px 1px;
+    }
+
+    .frames{
+        width: 95%;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 49%;
+    }
+
+    .row .col-md-50 .title {
+        top: -15%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: block;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
 
     header .navigation{
         position: fixed;
@@ -523,10 +704,167 @@ h2{
         left: 0;
         padding: 0;
     }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Banner -- */
+
+    #banner{
+        padding: 0;
+        height: auto;
+    }
+
+    .banner{
+        margin: 35px auto;
+        flex-direction: column;
+    }
+
+    .left-banner, .right-banner{
+        width: 88%;
+    }
+
+    .banner-heading {
+        font-size: 27px;
+    }
+
+    .banner-heading span {
+        font-size: 25px;
+    }
+
+    .left-banner .banner-para{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .left-banner .banner-info {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .left-banner a .banner-visualize {
+        width: 60%;
+        height: 30px;
+        margin: -10px 0px 10px 0px;
+        font-size: 13px;
+    }
+
+    #mobile{
+        display: block;
+    }
+
+    .right-banner{
+        display: none;
+    }
+
+    /* -- Canvas -- */
+
+    #canvas{
+        height: auto;
+        width: 90%;
+    }
+
+    .canva{
+        width: 88%;
+    }
+
+    /* -- Algo Information -- */
+
+    .sort{
+        flex-direction: column;
+    }
+
+    .left, .right{
+        width: 85%;
+    }
+
+    .left p {
+        padding: 5px 0;
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 0px;
+    }
+
+    .left p .algo-more {
+        width: 60%;
+        height: 36px;
+    }
+
+    .hr-algo{
+        width: 80%;
+    }
+
+    hr{
+        height: 5px;
+        margin: 15px 0px;
+        background-color: crimson;
+    }
+
+    .left p span {
+        color: orange;
+        padding: 0px 1px;
+    }
+
+    .frames{
+        width: 95%;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 100%;
+    }
+
+    .row .col-md-50 .title {
+        top: -15%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: none;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
 }
 
 @media (max-width: 375px){
 
+    /* Header */
 
     header a, #menu{
         font-size: 18px;
@@ -543,9 +881,167 @@ h2{
         padding: 0;
     }
 
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Banner -- */
+
+    #banner{
+        padding: 0;
+        height: auto;
+    }
+
+    .banner{
+        margin: 35px auto;
+        flex-direction: column;
+    }
+
+    .left-banner, .right-banner{
+        width: 88%;
+    }
+
+    .banner-heading {
+        font-size: 22px;
+    }
+
+    .banner-heading span {
+        font-size: 25px;
+    }
+
+    .left-banner .banner-para{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .left-banner .banner-info {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .left-banner a .banner-visualize {
+        width: 60%;
+        height: 30px;
+        margin: -10px 0px 10px 0px;
+        font-size: 13px;
+    }
+
+    #mobile{
+        display: block;
+    }
+
+    .right-banner{
+        display: none;
+    }
+
+    /* -- Canvas -- */
+
+    #canvas{
+        height: auto;
+        width: 90%;
+    }
+
+    .canva{
+        width: 88%;
+    }
+
+    /* -- Algo Information -- */
+
+    .sort{
+        flex-direction: column;
+    }
+
+    .left, .right{
+        width: 85%;
+    }
+
+    .left p {
+        padding: 5px 0;
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 0px;
+    }
+
+    .left p .algo-more {
+        width: 60%;
+        height: 36px;
+    }
+
+    .hr-algo{
+        width: 80%;
+    }
+
+    hr{
+        height: 5px;
+        margin: 15px 0px;
+        background-color: crimson;
+    }
+
+    .left p span {
+        color: orange;
+        padding: 0px 1px;
+    }
+
+    .frames{
+        width: 90%;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 100%;
+    }
+
+    .row .col-md-50 .title {
+        top: -15%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: none;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
 }
 
 @media (max-width: 320px){
+
+    /* -- Header -- */
     
     header a, #menu{
         font-size: 16px;
@@ -560,6 +1056,170 @@ h2{
         top: 44px;
         left: 0;
         padding: 0;
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Banner -- */
+
+    #banner{
+        padding: 0;
+        height: auto;
+    }
+
+    .banner{
+        margin: 35px auto;
+        flex-direction: column;
+    }
+
+    .left-banner, .right-banner{
+        width: 88%;
+    }
+
+    .banner-heading {
+        font-size: 20px;
+    }
+
+    .banner-heading span {
+        font-size: 20px;
+    }
+
+    .left-banner .banner-para{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .left-banner .banner-info {
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .left-banner a .banner-visualize {
+        width: 60%;
+        height: 30px;
+        margin: -10px 0px 10px 0px;
+        font-size: 13px;
+    }
+
+    #mobile{
+        display: block;
+    }
+
+    .right-banner{
+        display: none;
+    }
+
+    /* -- Canvas -- */
+
+    #canvas{
+        height: auto;
+        width: 90%;
+    }
+
+    .canva{
+        width: 88%;
+    }
+
+    /* -- Algo Information -- */
+
+    .sort{
+        flex-direction: column;
+    }
+
+    .left, .right{
+        width: 85%;
+    }
+
+    .left p {
+        padding: 5px 0;
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 0px;
+    }
+
+    .left p .algo-more {
+        width: 60%;
+        height: 36px;
+    }
+
+    .hr-algo{
+        width: 80%;
+    }
+
+    hr{
+        height: 5px;
+        margin: 15px 0px;
+        background-color: crimson;
+    }
+
+    .left p span {
+        color: orange;
+        padding: 0px 1px;
+    }
+
+    .frames{
+        width: 85%;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 100%;
+    }
+
+    .row .col-md-50 .title {
+        top: -12%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: none;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
+    /* Copyright */
+
+    .copyright p {
+        font-size: 10px;
+        font-weight: bold;
+        color: #333;
     }
 
 }
