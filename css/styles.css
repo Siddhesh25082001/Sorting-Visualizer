@@ -1,4 +1,4 @@
-/* --------------- This is the CSS File containing all the styling contents of the webpage 'index.html' ----------------*/
+/* -------------- This is the CSS File containing all the styling contents of the webpage 'index.html' ----------------*/
 
 @import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
 
@@ -9,7 +9,130 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* ------------------------------- CSS Variables for toggling between Dark Mode and Light Mode ------------------------ */
+/* -------------------------------------------- PreLoader ------------------------------------------------------------ */
+
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+
+.preloader::before{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #000;
+    transition: 1s;
+}
+
+.preloader.complete::before{
+    left: -50%;
+}
+
+.preloader::after{
+    content: ' ';
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #000;
+    transition: 1s;
+}
+
+.preloader.complete::after{
+    right: -50%;
+}
+
+/* ------------------------------------------------- Loader ---------------------------------------------------------- */
+
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 3px solid #fff;
+    animation: animate 2s linear infinite;
+    z-index: 10000;
+}
+
+.loader::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: crimson;
+    animation: animateBg 2s linear infinite;
+}
+
+.preloader.complete{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.gayab{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+@keyframes animate{
+    
+    0%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    25%{
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    50%{
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    75%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes animateBg{
+    
+    0%{
+        height: 0%;   
+    }
+
+    25%{
+        height: 0%;
+    }
+
+    50%{
+        height: 100%;
+    }
+
+    75%{
+        height: 100%;
+    }
+
+    100%{
+        height: 0%;
+    }
+}
+
+/* ------------------------------ CSS Variables for toggling between Dark Mode and Light Mode ------------------------ */
 
 /* :root{
     --primary-color: #fff;
@@ -29,7 +152,7 @@ section{
 /* --------------------------------------------Header Navigation Bar --------------------------------------------------*/
 
 header{
-    /* position: sticky; */
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -90,6 +213,30 @@ header .navigation li{
     display: none;
 }
 
+/* -------------------------------------------------- PopUp Modal -----------------------------------------------------*/
+#popup-LogIn{
+    background-image: url(../images/contact-img.svg);
+    position: fixed;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 500px;
+    width: 90%;
+    padding: 10px;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, .3);
+    margin: 10px auto;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+#popup-LogIn.activates{
+    top: 50%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.5s;
+}
+
 /* ----------------------------------------- Vertical Fixed Navbar ----------------------------------------------------*/
 
 .vnav{
@@ -144,22 +291,22 @@ header .navigation li{
 
 /* --------------------------------------------------- Canvas ---------------------------------------------------------*/
 
-/* #canvas{
-    margin-top: 130px;
-} */
-
-.canva{
+.canva-container{
     width: 90%;
-    height: 80%;
+    height: 505px;
     margin: 30px auto;
     border: 2px solid #111;
+    background-color: #111;
 }
 
-.canva video{
-    width: 100%;
-    height: -webkit-fill-available;
+.bar {
+    position: absolute;
+    display: inline-block;
+    margin-left: 2px;
+    background-color:orange; 
 }
-/* ---------------------------------------------------- Banner ---------------------------------------------------------*/
+
+/* --------------------------------------------------- Banner ---------------------------------------------------------*/
 
 .banner{
     display: flex;
@@ -1050,7 +1197,7 @@ h2{
     header .navigation{
         position: fixed;
         flex-direction: column;
-        width: 100%;
+        width: 80%;
         height: 100vh;
         background-color: whitesmoke;
         top: 44px;
