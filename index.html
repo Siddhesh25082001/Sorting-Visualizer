@@ -46,8 +46,8 @@
             <a href="" class="logo"><span><i class="fa fa-signal"></i></span> Sorting Visualizer</a>
             <ul class="navigation">
                 <li>
-                    <select class="form-select">
-                        <option selected>Sort Algorithm</option>
+                    <select id="sortname" name="sortname" onchange="sortname()" class="form-select">
+                        <option value="notSelected" selected>Sort Algorithm</option>
                         <option value="1">Bubble Sort</option>
                         <option value="2">Insertion Sort</option>
                         <option value="3">Selection Sort</option>
@@ -67,10 +67,16 @@
                     </select>            
                 </li>
 
-                <li><button type="button" href="#canvas" onclick="check()" class="btn btn-outline-primary">
+                <li>
+                    <span id="speed">Speed
+                        <input id="speed_input" type="range" min="20" max="500" stepDown=10 value=100>
+                    </span>
+                </li>
+
+                <li><button type="button" href="#canvas" onclick="check()" class="btn btn-outline-primary newArray">
                     Generate New Array</button>
                 </li>
-                <li><a href="LogIn.html"><button type="button" class="btn btn-outline-success">Sign In</button></a></li>
+                <li><a href="#"><button type="button" class="btn btn-outline-success bubbleSort">Sign In</button></a></li>
                 <li><button class="mode" id="icon"><i class="fa fa-moon-o"></i></button></li>
 
             </ul>
@@ -107,7 +113,7 @@
 
                 </div>
                 <div class="right-banner">
-                    <video class="banner-frames" src="images/project_gist.mp4" type="video/mp4" autoplay loop></video>
+                    <video class="banner-frames" src="images/project_gist.mp4" type="video/mp4" autoplay muted loop></video>
                 </div>
             </div>
         </section>
@@ -125,7 +131,7 @@
             <h2>Algorithm Information</h2>
             <hr class="hr-algo">
 
-            <div class="sort" id="sort">
+            <div class="sort" id="notSelected">
                 <div class="left">
                     <h3 class="algo-name">Select a Sorting Algorithm</h3>
                     
@@ -145,12 +151,12 @@
 
                 </div>
                 <div class="right">
-                    <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/4GA2CzqUreM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </iframe>
+                    <!-- <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/4GA2CzqUreM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </iframe> -->
                 </div>
             </div>
             
-            <div class="sort" id="bubble-sort">
+            <div class="sort" id="1">
                 <div class="left">
                     <h3 class="algo-name"><i class="fa fa-hand-o-right"></i>Bubble Sort</h3>
                     
@@ -171,11 +177,11 @@
                     </p>
                 </div>
                 <div class="right">
-                    <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/nmhjrI-aW5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/nmhjrI-aW5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                 </div>
             </div>
             
-            <div class="sort" id="insertion-sort">
+            <div class="sort" id="2">
                 <div class="left">
                     <h3 class="algo-name"><i class="fa fa-hand-o-right"></i>Insertion Sort</h3>
                     
@@ -195,11 +201,11 @@
 
                 </div>
                 <div class="right">
-                    <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/OGzPmgsI-pQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/OGzPmgsI-pQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                 </div>
             </div>
             
-            <div class="sort" id="selection-sort">
+            <div class="sort" id="3">
                 <div class="left">
                     <h3 class="algo-name"><i class="fa fa-hand-o-right"></i>Selection Sort</h3>
                     
@@ -222,11 +228,11 @@
 
                 </div>
                 <div class="right">
-                    <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/xWBP4lzkoyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/xWBP4lzkoyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                 </div>
             </div>
             
-            <div class="sort" id="merge-sort">
+            <div class="sort" id="4">
                 <div class="left">
                     <h3 class="algo-name"><i class="fa fa-hand-o-right"></i>Merge Sort</h3>
                     
@@ -244,11 +250,11 @@
 
                 </div>
                 <div class="right">
-                    <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/JSceec-wEyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/JSceec-wEyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                 </div>
             </div>
 
-            <div class="sort" id="quick-sort">
+            <div class="sort" id="5">
                 <div class="left">
                     <h3 class="algo-name"><i class="fa fa-hand-o-right"></i> Quick Sort</h3>
                     
@@ -270,7 +276,7 @@
 
                 </div>
                 <div class="right">
-                    <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/PgBzjlCcFvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <!-- <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/PgBzjlCcFvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
                 </div>
             </div>
             
@@ -363,6 +369,8 @@
 
     <!-- Linking the JS File -->
     <script src="js/script.js"></script>
-    <script src="js/algorithms.js"></script>
+    <!-- <script src="js/algorithms.js"></script> -->
+    <script src="js/sorting.js"></script>
+    <script src="js/bubble.js"></script>
 
 </html>
