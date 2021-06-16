@@ -198,6 +198,15 @@ header .navigation li{
     cursor: pointer;
 }
 
+.navigation li span #speed_input{
+    cursor: pointer;
+    margin: 10px 0px;
+}
+
+.navigation li span{
+    color: #111;
+}
+
 .navigation li .mode{
     border: none;
     padding: 10px;
@@ -271,19 +280,21 @@ header .navigation li{
 /* --------------------------------------------------- Canvas ---------------------------------------------------------*/
 
 .canva-container{
+    display: flex;
     width: 90%;
-    height: 505px;
+    height: 500px;
     margin: 30px auto;
-    border: 2px solid #111;
     background-color: #111;
+    justify-content: center;
+    align-items: baseline;
+    transition: all 2s ease;
 }
 
 .bar{
-    position: absolute;
-    z-index: 0;
-    display: inline-block;
-    margin-left: 2px;
-    background-color:orange; 
+    background:orange; 
+    width: 10px;
+    border: 1px solid #111;
+    transition: all 1s ease;
 }
 
 /* --------------------------------------------------- Banner ---------------------------------------------------------*/
@@ -994,13 +1005,22 @@ h2{
 
     /* -- Canvas -- */
 
-    #canvas{
-        height: auto;
+    .canva-container{
+        display: flex;
         width: 90%;
+        height: 500px;
+        margin: 30px auto;
+        background-color: #111;
+        justify-content: center;
+        align-items: baseline;
+        transition: all 2s ease;
     }
-
-    .canva{
-        width: 88%;
+    
+    .bar{
+        background:orange; 
+        width: 10px;
+        border: 1px solid #111;
+        transition: all 1s ease;
     }
 
     /* -- Algo Information -- */
@@ -1175,14 +1195,23 @@ h2{
     }
 
     /* -- Canvas -- */
-
-    #canvas{
-        height: auto;
+    
+    .canva-container{
+        display: flex;
         width: 90%;
+        height: 500px;
+        margin: 30px auto;
+        background-color: #111;
+        justify-content: center;
+        align-items: baseline;
+        transition: all 2s ease;
     }
-
-    .canva{
-        width: 88%;
+    
+    .bar{
+        background:orange; 
+        width: 10px;
+        border: 1px solid #111;
+        transition: all 1s ease;
     }
 
 
@@ -1362,18 +1391,21 @@ h2{
     /* -- Canvas -- */
 
     .canva-container{
+        display: flex;
         width: 90%;
-        height: 505px;
+        height: 500px;
         margin: 30px auto;
-        border: 2px solid #111;
         background-color: #111;
+        justify-content: center;
+        align-items: baseline;
+        transition: all 2s ease;
     }
     
-    .bar {
-        position: absolute;
-        display: inline-block;
-        margin-left: 2px;
-        background-color:orange; 
+    .bar{
+        background:orange; 
+        width: 10px;
+        border: 1px solid #111;
+        transition: all 1s ease;
     }
 
     /* -- Algo Information -- */
