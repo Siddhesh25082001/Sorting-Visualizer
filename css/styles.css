@@ -163,6 +163,7 @@
 
 .body{
     background-color: var(--primary-color);
+    transition: all 1s ease-in-out;
 }
 
 section{
