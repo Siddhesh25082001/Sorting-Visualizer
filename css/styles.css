@@ -282,7 +282,8 @@ header .navigation li{
 .canva-container{
     display: flex;
     width: 90%;
-    height: 500px;
+    min-height: 50vh;
+    max-height: auto;
     margin: 30px auto;
     background-color: #111;
     justify-content: center;
@@ -290,9 +291,46 @@ header .navigation li{
     transition: all 2s ease;
 }
 
+.canva-para{
+    width: 90%;
+    margin: 5px auto;
+    font-size: 24px;
+    padding: 0px 20px;
+}
+
+.canva-info{
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    justify-content: space-between;
+}
+
+.canva-input{
+    margin: 3px 20px 0px 10px;
+    resize: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+#custom{
+    display: block;
+    margin: 5px auto;
+    padding: 10px 30px;
+    color: #111;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: orange;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
 .bar{
     background:orange; 
-    width: 10px;
+    width: 300px;
     border: 1px solid #111;
     transition: all 1s ease;
 }
@@ -716,6 +754,15 @@ h2{
     .testimonials .content .box .imgBox {
         left: 30%;
     }
+
+    .canva-info{
+        flex-direction: row;
+    }
+
+    .canva-input{
+        padding: 10px 15px;
+        margin: 5px;
+    }
 }
 
 @media (max-width: 1030px){
@@ -796,16 +843,71 @@ h2{
         display: none;
     }
 
-    /* -- Canvas -- */
+/* -- Canvas -- */
 
-    #canvas{
-        height: auto;
+      .canva-container{
+        display: flex;
         width: 90%;
+        min-height: 20vh;
+        max-height: max-content;
+        margin: 30px auto;
+        background-color: #111;
+        justify-content: center;
+        align-items: baseline;
+        transition: all 2s ease;
     }
 
-    .canva{
-        width: 88%;
+    .canva-para {
+        width: 95%;
+        margin: 5px auto;
+        font-size: 22px;
+        padding: 0px 20px;
     }
+    
+    .canva-info{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+        justify-content: space-between;
+    }
+    
+    .canva-input {
+        width: 95%;
+        margin: 5px 0px;
+        resize: none;
+        padding: 10px 6px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    #customElements{
+        height: 60px;
+    }
+    
+    #custom{
+        display: block;
+        margin: 5px auto;
+        padding: 6px 20px;
+        color: #111;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: orange;
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        opacity: 0.8;
+        outline: none;
+    }
+
+    .bar{
+        background:orange; 
+        width: 300px;
+        border: 1px solid #111;
+        transition: all 1s ease;
+    }
+
 
     /* -- Algo Information -- */
 
@@ -1008,20 +1110,65 @@ h2{
     .canva-container{
         display: flex;
         width: 90%;
-        height: 500px;
+        min-height: 20vh;
+        max-height: max-content;
         margin: 30px auto;
         background-color: #111;
         justify-content: center;
         align-items: baseline;
         transition: all 2s ease;
     }
+
+    .canva-para {
+        width: 100%;
+        margin: 5px auto;
+        font-size: 22px;
+        padding: 0px 20px;
+    }
     
+    .canva-info{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+        justify-content: space-between;
+    }
+    
+    .canva-input {
+        margin: 5px 0px;
+        resize: none;
+        padding: 10px 6px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    #customElements{
+        height: 60px;
+    }
+    
+    #custom{
+        display: block;
+        margin: 5px auto;
+        padding: 6px 20px;
+        color: #111;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: orange;
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        opacity: 0.8;
+        outline: none;
+    }
+
     .bar{
         background:orange; 
-        width: 10px;
+        width: 300px;
         border: 1px solid #111;
         transition: all 1s ease;
     }
+
 
     /* -- Algo Information -- */
 
@@ -1194,26 +1341,69 @@ h2{
         display: none;
     }
 
-    /* -- Canvas -- */
-    
-    .canva-container{
+      /* -- Canvas -- */
+
+      .canva-container{
         display: flex;
         width: 90%;
-        height: 500px;
+        min-height: 20vh;
+        max-height: max-content;
         margin: 30px auto;
         background-color: #111;
         justify-content: center;
         align-items: baseline;
         transition: all 2s ease;
     }
+
+    .canva-para {
+        width: 100%;
+        margin: 5px auto;
+        font-size: 20px;
+        padding: 0px 20px;
+    }
     
+    .canva-info{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+        justify-content: space-between;
+    }
+    
+    .canva-input {
+        margin: 5px 0px;
+        resize: none;
+        padding: 10px 6px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    #customElements{
+        height: 60px;
+    }
+    
+    #custom{
+        display: block;
+        margin: 5px auto;
+        padding: 6px 20px;
+        color: #111;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: orange;
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        opacity: 0.8;
+        outline: none;
+    }
+
     .bar{
         background:orange; 
-        width: 10px;
+        width: 300px;
         border: 1px solid #111;
         transition: all 1s ease;
     }
-
 
     /* About Us */
 
@@ -1393,17 +1583,61 @@ h2{
     .canva-container{
         display: flex;
         width: 90%;
-        height: 500px;
+        min-height: 50vh;
+        max-height: auto;
         margin: 30px auto;
         background-color: #111;
         justify-content: center;
         align-items: baseline;
         transition: all 2s ease;
     }
+
+    .canva-para {
+        width: 100%;
+        margin: 5px auto;
+        font-size: 18px;
+        padding: 0px 20px;
+    }
     
+    .canva-info{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 10px auto;
+        justify-content: space-between;
+    }
+    
+    .canva-input {
+        margin: 5px 0px;
+        resize: none;
+        padding: 10px 6px;
+        font-size: 12px;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    #customElements{
+        height: 60px;
+    }
+    
+    #custom{
+        display: block;
+        margin: 5px auto;
+        padding: 5px 15px;
+        color: #111;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: orange;
+        font-size: 12px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        opacity: 0.8;
+    }
+
     .bar{
         background:orange; 
-        width: 10px;
+        width: 300px;
         border: 1px solid #111;
         transition: all 1s ease;
     }
@@ -1503,4 +1737,3 @@ h2{
     }
 
 }
-
