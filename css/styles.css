@@ -148,18 +148,18 @@
     --dec-color: whitesmoke; 
 }
 
-/* .darktheme{
+.darktheme{
     --primary-color: #111;
     --secondary-color: #fff;
     --tertiary-color: orange;
     --quaternary-color: crimson;
     --pent-color: #16a085;
-    --hex-color: blue;
-    --hept-color: rgb(255, 255, 255);
+    --hex-color: cyan;
+    --hept-color: #111;
     --oct-color: rgb(214, 14, 214);
     --non-color: rgb(8, 189, 128);
     --dec-color: whitesmoke; 
-} */
+}
 
 .body{
     background-color: var(--primary-color);
@@ -230,14 +230,27 @@ header .navigation li{
 .navigation li .mode{
     border: none;
     padding: 10px;
-    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    background: none;
+}
+
+.btn.btn-outline-primary{
+    background: #0d6efd;
+    color: white;
+}
+
+.btn.btn-outline-success{
+    background: #198754;
+    color: white;
 }
 
 #menu{
     width: 30px;
     font-size: 20px;
-    background-color: var(--primary-color);
+    color: var(--tertiary-color);
     display: none;
+    text-align: center;
+    background-color: var(--hept-color);
 }
 
 #check{
@@ -316,6 +329,7 @@ header .navigation li{
     margin: 5px auto;
     font-size: 24px;
     padding: 0px 20px;
+    color: var(--secondary-color);
 }
 
 .canva-info{
@@ -351,7 +365,7 @@ header .navigation li{
 .bar{
     background: var(--tertiary-color);
     width: 300px;
-    border: 1px solid var(--secondary-color);
+    border: 1px solid #111;
     transition: all 1s ease;
 }
 
@@ -473,6 +487,7 @@ header .navigation li{
 
 h2{
     text-align: center;
+    color: var(--secondary-color);
 }
 
 .hr-algo{
@@ -488,9 +503,14 @@ h2{
 }
 
 .algo-name{
+    color: var(--secondary-color);
     font-weight: 1000;
     text-transform: capitalize;
     letter-spacing: 1.5px;
+}
+
+.main-info{
+    color: var(--secondary-color);
 }
 
 .algo-performance{
@@ -539,7 +559,7 @@ h2{
 }
 
 .testimonials .title .titleText{
-    color: var(--primary-color);
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     padding: 15px;
@@ -640,7 +660,7 @@ h2{
     width: 50%;
     height: 15%;
     background-color: rgb(187, 187, 187);
-    color: var(--secondary-color);
+    color: #111;
     font-weight: bold;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -658,6 +678,7 @@ h2{
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin-bottom: 0px;
+    color: #111;
 }
 
 .contact .title .titleText span{
@@ -746,6 +767,10 @@ h2{
 }
 
 /* --------------------------------------------------- Copyright ------------------------------------------------------*/
+
+#copyright{
+    padding: 20px 0px 0px 0px;
+}
 
 .copyright{
     padding: 10px;
