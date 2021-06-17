@@ -46,7 +46,7 @@
             <a href="" class="logo"><span><i class="fa fa-signal"></i></span> Sorting Visualizer</a>
             <ul class="navigation">
                 <li>
-                    <select id="sortname" name="sortname" onchange="sortname()" class="form-select">
+                    <select id="sortname" name="sortname" onchange="sortname(), checkSortAlgo()" class="form-select">
                         <option value="notSelected" selected>Sort Algorithm</option>
                         <option value="1">Bubble Sort</option>
                         <option value="2">Insertion Sort</option>
@@ -73,10 +73,11 @@
                     </span>
                 </li>
 
-                <li><button type="button" href="#canvas" onclick="check()" class="btn btn-outline-primary newArray">
-                    Generate New Array</button>
+                <li>
+                    <button type="button" id="navBarSize" href="#canvas" class="btn btn-outline-primary newArray">Generate New Array</button>
                 </li>
-                <li><a href="#"><button type="button" class="btn btn-outline-success bubbleSort">Sign In</button></a></li>
+
+                <li><a href="LogIn.html"><button type="button" class="btn btn-outline-success">Sign In</button></a></li>
                 <li><button class="mode" id="icon"><i class="fa fa-moon-o"></i></button></li>
 
             </ul>
@@ -120,9 +121,20 @@
 
         <!-- Main Canvas - ALGO -->
         <section id="canvas">
+
+            <p class="canva-para"> For Custom Inputs <i class="fa fa-hand-o-down"></i></p>
+
+            <div class="canva-info">
+                <input type="text" id="customArraySize" class="canva-input" name="customArraySize" placeholder="Enter Size">
+                <textarea name="customElements" id="customElements" class="canva-input" placeholder="Enter array Elements separated by a space between 1 and 100 (both inclusive)" cols="10" rows="1"></textarea>
+            </div>
+
+            <button type="button" id="custom"> Generate </button>
+
             <div class="canva-container" id="canva">
 
             </div>
+
         </section>
 
         <!-- Algo information -->
@@ -151,8 +163,8 @@
 
                 </div>
                 <div class="right">
-                    <!-- <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/4GA2CzqUreM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </iframe> -->
+                    <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/4GA2CzqUreM" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </iframe>
                 </div>
             </div>
             
@@ -177,7 +189,7 @@
                     </p>
                 </div>
                 <div class="right">
-                    <!-- <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/nmhjrI-aW5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/nmhjrI-aW5o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             
@@ -201,7 +213,7 @@
 
                 </div>
                 <div class="right">
-                    <!-- <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/OGzPmgsI-pQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/OGzPmgsI-pQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             
@@ -228,7 +240,7 @@
 
                 </div>
                 <div class="right">
-                    <!-- <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/xWBP4lzkoyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/xWBP4lzkoyM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             
@@ -250,7 +262,7 @@
 
                 </div>
                 <div class="right">
-                    <!-- <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/JSceec-wEyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/JSceec-wEyw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
 
@@ -276,7 +288,7 @@
 
                 </div>
                 <div class="right">
-                    <!-- <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/PgBzjlCcFvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> -->
+                    <iframe class="frames" width="560" height="315" src="https://www.youtube.com/embed/PgBzjlCcFvc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
             
@@ -369,8 +381,7 @@
 
     <!-- Linking the JS File -->
     <script src="js/script.js"></script>
-    <!-- <script src="js/algorithms.js"></script> -->
-    <script src="js/sorting.js"></script>
+    <script src="js/main.js"></script>
     <script src="js/bubble.js"></script>
 
 </html>
