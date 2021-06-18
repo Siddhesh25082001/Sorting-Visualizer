@@ -1,18 +1,3 @@
-// Checking the sorting algo to be executed.
-function checkSortAlgo(){
-    var sortAlgoName = parseInt(document.getElementById('sortname').value);
-    if(sortAlgoName == 1) BubbleSort();
-    if(sortAlgoName == 2) InsertionSort();
-    if(sortAlgoName == 3) SelectionSort();
-    if(sortAlgoName == 4) MergeSort();
-    if(sortAlgoName == 5){
-        let ele = document.querySelectorAll('.bar');
-        let l = 0; // low
-        let h = ele.length - 1; // high
-        QuickSort(ele, l, h);
-    }
-}
-
 // Getting the size of the array to be generated (i.e no of bars) - RANDOM BASIS
 var onNavBarSize = document.getElementById("navBarSize");
 onNavBarSize.addEventListener("click", function(){
@@ -110,3 +95,29 @@ function swap(el1, el2) {
     el1.style.height = el2.style.height;
     el2.style.height = temp;
 }
+
+// Checking the sorting algo to be executed.
+function checkSortAlgo(){
+    var sortAlgoName = parseInt(document.getElementById('sortname').value);
+    
+    if(sortAlgoName == 1) BubbleSort();
+        
+    if(sortAlgoName == 2) InsertionSort();
+    
+    if(sortAlgoName == 3) SelectionSort();
+    
+    if(sortAlgoName == 4){
+        let ele = document.querySelectorAll('.bar');
+        let l = 0;
+        let h = ele.length - 1;
+        MergeSort(ele, l, h);
+    }
+    
+    if(sortAlgoName == 5){
+        let ele = document.querySelectorAll('.bar');
+        let l = 0; // low
+        let h = ele.length - 1; // high
+        QuickSort(ele, l, h);
+    }
+}
+
