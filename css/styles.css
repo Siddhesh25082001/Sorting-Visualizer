@@ -1,0 +1,1801 @@
+/* -------------- This is the CSS File containing all the styling contents of the webpage 'index.html' ----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* -------------------------------------------- PreLoader ------------------------------------------------------------ */
+
+.preloader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+    z-index: 1000;
+}
+
+.preloader::before{
+    content: ' ';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #000000;
+    transition: 1s;
+}
+
+.preloader.complete::before{
+    left: -50%;
+}
+
+.preloader::after{
+    content: ' ';
+    position: absolute;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: #000;
+    transition: 1s;
+}
+
+.preloader.complete::after{
+    right: -50%;
+}
+
+/* ------------------------------------------------- Loader ---------------------------------------------------------- */
+
+.loader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    border: 3px solid var(--primary-color);
+    animation: animate 2s linear infinite;
+    z-index: 10000;
+}
+
+.loader::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--quaternary-color);
+    animation: animateBg 2s linear infinite;
+}
+
+.preloader.complete{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.gayab{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+@keyframes animate{
+    
+    0%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    25%{
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    50%{
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    75%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+
+    100%{
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes animateBg{
+    
+    0%{
+        height: 0%;   
+    }
+
+    25%{
+        height: 0%;
+    }
+
+    50%{
+        height: 100%;
+    }
+
+    75%{
+        height: 100%;
+    }
+
+    100%{
+        height: 0%;
+    }
+}
+
+/* ------------------------------ CSS Variables for toggling between Dark Mode and Light Mode ------------------------ */
+
+:root{
+    --primary-color: #fff;
+    --secondary-color: #111;
+    --tertiary-color: orange;
+    --quaternary-color: crimson;
+    --pent-color: #16a085;
+    --hex-color: blue;
+    --hept-color: rgb(255, 255, 255);
+    --oct-color: rgb(214, 14, 214);
+    --non-color: rgb(8, 189, 128);
+    --dec-color: whitesmoke; 
+}
+
+.darktheme{
+    --primary-color: #111;
+    --secondary-color: #fff;
+    --tertiary-color: orange;
+    --quaternary-color: crimson;
+    --pent-color: #16a085;
+    --hex-color: cyan;
+    --hept-color: #111;
+    --oct-color: rgb(214, 14, 214);
+    --non-color: rgb(8, 189, 128);
+    --dec-color: whitesmoke; 
+}
+
+.body{
+    background-color: var(--primary-color);
+    transition: all 1s ease-in-out;
+}
+
+section{
+    height: 100vh;
+    padding: 20px 0px;
+}
+
+/* --------------------------------------------Header Navigation Bar --------------------------------------------------*/
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgb(100 94 94 / 70%);
+    background-color: var(--hept-color);
+    z-index: 10; /* any bigger value greater than 1 */
+}
+
+header a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header a:hover{
+    color: var(--secondary-color);
+}
+
+header span{
+    color: var(--tertiary-color);
+}
+
+header .navigation{
+    position: relative;
+    display: flex;
+}
+
+header .navigation li{
+    list-style: none;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.navigation li .form-select{
+    outline: none;
+    cursor: pointer;
+}
+
+.navigation li span #speed_input{
+    cursor: pointer;
+    margin: 10px 0px;
+}
+
+.navigation li span{
+    color: var(--secondary-color);
+}
+
+.navigation li .mode{
+    border: none;
+    padding: 10px;
+    color: var(--secondary-color);
+    background: none;
+}
+
+.btn.btn-outline-primary{
+    background: #0d6efd;
+    color: white;
+}
+
+.btn.btn-outline-success{
+    background: #198754;
+    color: white;
+}
+
+#menu{
+    width: 30px;
+    font-size: 20px;
+    color: var(--tertiary-color);
+    display: none;
+    text-align: center;
+    background-color: var(--hept-color);
+}
+
+#check{
+    display: none;
+}
+
+/* ----------------------------------------- Vertical Fixed Navbar ----------------------------------------------------*/
+
+.vnav{
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.vnav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.vnav ul li{
+    list-style: none;
+    margin: 5px 0;
+}
+
+.vnav ul li a{
+    width: 40px;
+    height: 40px;
+    line-height: 50px;
+    font-size: 25px;
+    color: var(--primary-color);
+    background: var(--pent-color);
+    display: block;
+    text-align: center;
+}
+
+.vnav ul li a span{
+    position: absolute;
+    right: 0;
+    width: 140px;
+    height: 50px;
+    color: var(--secondary-color);
+    background: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+    z-index: -1;
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: 0.5s;
+    box-shadow: 0 4px 10px rgb(100 94 94 / 70%);
+}
+
+.vnav ul li:hover span{
+    opacity: 1;
+    backface-visibility: visible;
+    right: 50px;
+}
+
+/* --------------------------------------------------- Canvas ---------------------------------------------------------*/
+
+.canva-container{
+    display: flex;
+    width: 90%;
+    min-height: 50vh;
+    max-height: 90vh;
+    margin: 30px auto;
+    background-color: var(--secondary-color);
+    justify-content: center;
+    align-items: baseline;
+    transition: all 2s ease;
+}
+
+.canva-para{
+    width: 90%;
+    margin: 5px auto;
+    font-size: 24px;
+    padding: 0px 20px;
+    color: var(--secondary-color);
+}
+
+.canva-info{
+    display: flex;
+    width: 90%;
+    margin: 20px auto;
+    justify-content: space-between;
+}
+
+.canva-input{
+    margin: 3px 20px 0px 10px;
+    resize: none;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: 300;
+    color: #111;
+}
+
+#custom{
+    display: block;
+    margin: 5px auto;
+    padding: 10px 30px;
+    color: var(--secondary-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background-color: var(--tertiary-color);
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    opacity: 0.8;
+}
+
+.bar{
+    background: var(--tertiary-color);
+    width: 300px;
+    border: 1px solid #111;
+    transition: all 1s ease;
+}
+
+/* --------------------------------------------------- Banner ---------------------------------------------------------*/
+
+.banner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 20px auto;
+}
+
+.left-banner{
+    width: 49%;
+}
+
+#mobile{
+    display: none;
+}
+
+.right-banner{
+    width: 49%;
+}
+
+.banner-heading{
+    text-align: justify;
+    font-size: 48px;
+    color: var(--secondary-color);
+}
+
+.banner-heading span{
+    color: var(--tertiary-color);
+    font-size: 36px;
+}
+
+.left-banner .banner-para{
+    font-family: 'Cookie', cursive;
+    font-style: italic;
+    letter-spacing: 0.2px;
+    font-size: 30px;
+    color: var(--secondary-color);
+}
+
+.left-banner .banner-info{
+    text-align: justify;
+    font-size: 20px;
+    line-height: 36px;
+    color: var(--secondary-color);
+}
+
+.left-banner .banner-info i{
+    color: var(--quaternary-color);
+}
+
+.left-banner .banner-info b{
+    color: var(--hex-color);
+}
+
+.left-banner a .banner-visualize{
+    width: 45%;
+    height: 50px;
+    margin: 10px 0px;
+    padding: 5px 8px;
+    font-size: 20px;
+    border: none;
+    background-color: var(--oct-color);
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+    transition: 0.5s ease-out;
+}
+
+.left-banner a .banner-visualize:hover{
+    letter-spacing: 3px;
+    transition: 0.5s ease-in-out;
+}
+
+.banner-frames{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+/* -------------------------------------------- Algorithm Information -------------------------------------------------*/
+
+#main{
+    height: auto;
+}
+
+.sort{
+    display: flex;
+    width: 90%;
+    margin: 30px auto;
+}
+
+.left{
+    width: 69%;
+}
+
+.left p{
+    text-align: justify;
+    padding: 10px 0;
+    font-size: 16px;
+}
+
+.left p span{
+    color: var(--tertiary-color);
+}
+
+.right{
+    width: 39%;
+    margin: 30px 25px;
+}
+
+h2{
+    text-align: center;
+    color: var(--secondary-color);
+}
+
+.hr-algo{
+    width: 90%;
+    margin: 0px auto;
+    border: 3px solid var(--quaternary-color);
+}
+
+.frames{
+    width: 100%;
+    height: 80%;
+    cursor: pointer;
+}
+
+.algo-name{
+    color: var(--secondary-color);
+    font-weight: 1000;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+
+.sort .left .main-info{
+    color: var(--secondary-color);
+}
+
+.algo-performance{
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    color: var(--non-color);
+}
+
+.algo-name .fa{
+    margin-right: 10px;
+}
+
+.left p .algo-more{
+    width: 25%;
+    height: 40px;
+    margin: 10px 0px;
+    padding: 5px 8px;
+    border: none;
+    background-color: var(--quaternary-color);
+    border-radius: 25px;
+    text-align: center;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+/*--------------------------------------------- Testimonials ----------------------------------------------------------*/
+
+.testimonials{
+    background-image: url(../images/bg.jpg);
+    background-size: cover;
+    fill-opacity: inherit;
+}
+
+.testimonials .title p{
+    font-family: 'Cookie', cursive;
+    font-style: italic;
+    letter-spacing: 0.2px;
+    font-size: 40px;;
+}
+
+.testimonials .title span{
+    color: var(--quaternary-color);
+}
+
+.testimonials .title .titleText{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 15px;
+}
+
+.testimonials .title p{
+    color: var(--primary-color);
+    letter-spacing: 1.5px;
+}
+
+.testimonials .content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+.testimonials .content .box{
+    width: 340px;
+    margin: 15px 20px;
+    padding: 40px;
+    background: var(--dec-color);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 7px;
+    cursor: pointer;
+    box-shadow: 5px 10px 35px rgba(0, 0, 0, 0.2);
+}
+
+.testimonials .content .box:hover{
+    transform: scale(1.05);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.2);
+    transition: 0.2s ease-in;
+}
+
+.testimonials .content .box .imgBox{
+    position: relative;
+    left: auto;
+    right: auto;
+    width: 80px;
+    height: 80px;
+    margin-bottom: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.testimonials .content .box .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonials .content .box .text p{
+    text-align: justify;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.testimonials .content .box .text h3{
+    text-align: center;
+    padding: 5px;
+    color: var(--quaternary-color);
+}
+
+/* -------------------------------------------------- Contact Us ------------------------------------------------------*/
+
+.contact{
+    width: 90%;
+    margin: 10px auto;
+    background-color: var(--dec-color);
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 90%;
+    padding: 0px 10px 0px 50px;
+}
+
+.row .col-md-50{
+    position: relative;
+    top: 3%;
+    width: 48%;
+    margin: 30px 0px;
+}
+
+.row .col-md-50 .title{
+    position: relative;
+    top: -12%;
+    left: 22%;
+    width: 50%;
+    height: 15%;
+    background-color: rgb(187, 187, 187);
+    color: #111;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.row .col-md-50 img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.contact .title .titleText{
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    color: #111;
+}
+
+.contact .title .titleText span{
+    color: var(--quaternary-color);
+}
+
+.contact .title p{
+    font-family: 'Cookie', cursive;
+    font-style: italic;
+    letter-spacing: 0.2px;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contactForm{
+    padding: 30px 40px;
+    background: var(--primary-color);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+    max-width: 100%;
+    max-height: fit-content;
+    border-radius: 7px;
+}
+
+.contactForm h3{
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.contactForm .inputBox input, textarea{
+    width: 100%;
+    border: 1px solid #255;
+    padding: 10px;
+    color: var(--secondary-color);
+    resize: none;
+}
+
+.contactForm .inputBox textarea{
+    resize: none;
+}
+
+.contactForm .inputBox select{
+    width: 50%;
+    border: 1px solid #255;
+    padding: 10px;
+    color: var(--secondary-color);
+}
+
+.contact .row .contactForm .btn{
+    font-size: 20px;
+    color: var(--primary-color);
+    background: var(--quaternary-color);
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s ease-in;
+    text-decoration: none;
+}
+
+.title
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .title .titleText{
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 15px;
+}
+
+.contact .title .titleText span{
+    color: var(--quaternary-color);
+}
+
+/* --------------------------------------------------- Copyright ------------------------------------------------------*/
+
+#copyright{
+    padding: 20px 0px 0px 0px;
+}
+
+.copyright{
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: var(--dec-color);
+}
+
+.copyright p{
+    font-weight: bold;
+    color: #333;
+}
+
+.copyright a{
+    color: var(--quaternary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* -------------------------------------------- Media Queries -------------------------------------------------------*/
+
+
+@media (max-width: 1440px){
+
+    section{
+        height: auto;
+    }
+
+    .testimonials .content .box .imgBox {
+        left: 30%;
+    }
+
+    .canva-info{
+        flex-direction: row;
+    }
+
+    .canva-input{
+        padding: 10px 15px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 1030px){
+
+    /* -- Header Navigation Bar --*/
+
+    header{
+        background-color: var(--hept-color);
+    }
+
+    header .navigation{
+        background-color: var(--hept-color);
+    }
+
+    #menu{
+        display: block;
+        align-items: center;
+
+    }
+
+    header{
+        justify-content: space-between;
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 35px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Banner -- */
+
+    #banner{
+        padding: 0;
+        height: auto;
+    }
+
+    .banner{
+        margin: 35px auto;
+        flex-direction: column;
+    }
+
+    .left-banner, .right-banner{
+        width: 90%;
+    }
+
+    .banner-heading {
+        font-size: 36px;
+    }
+
+    .banner-heading span {
+        font-size: 25px;
+    }
+
+    .left-banner .banner-para{
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+
+    .left-banner .banner-info {
+        font-size: 18px;
+        line-height: 40px;
+    }
+
+    .left-banner a .banner-visualize {
+        width: 30%;
+        height: 30px;
+        margin: -10px 0px 10px 0px;
+        font-size: 13px;
+    }
+
+    #mobile{
+        display: block;
+    }
+
+    .right-banner{
+        display: none;
+    }
+
+/* -- Canvas -- */
+
+      .canva-container{
+        display: flex;
+        width: 90%;
+        min-height: 20vh;
+        max-height: max-content;
+        margin: 30px 20px;
+        background-color: var(--secondary-color);
+        justify-content: center;
+        align-items: baseline;
+        transition: all 2s ease;
+    }
+
+    .canva-para {
+        width: 95%;
+        margin: 5px auto;
+        font-size: 22px;
+        padding: 0px 20px;
+    }
+    
+    .canva-info{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+        justify-content: space-between;
+    }
+    
+    .canva-input {
+        width: 95%;
+        margin: 5px 0px;
+        resize: none;
+        padding: 10px 6px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    #customElements{
+        height: 60px;
+    }
+    
+    #custom{
+        display: block;
+        margin: 5px auto;
+        padding: 6px 20px;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: var(--tertiary-color);
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        opacity: 0.8;
+        outline: none;
+    }
+
+    .bar{
+        background:var(--tertiary-color); 
+        width: 300px;
+        border: 1px solid var(--secondary-color);
+        transition: all 1s ease;
+    }
+
+
+    /* -- Algo Information -- */
+
+    .left{
+        width: 69%
+    }
+
+    .right{
+        width: 39%;
+        height: auto;
+    }
+
+    .left p {
+        padding: 5px 0;
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 0px;
+    }
+
+    .left p .algo-more {
+        width: 60%;
+        height: 36px;
+    }
+
+    .hr-algo{
+        width: 80%;
+    }
+
+    hr{
+        height: 5px;
+        margin: 15px 0px;
+        background-color: var(--quaternary-color);
+    }
+
+    .left p span {
+        color: var(--tertiary-color);
+        padding: 0px 1px;
+    }
+
+    .frames{
+        width: 95%;
+    }
+
+    /* About Us */
+    
+    .testimonials .content .box .imgBox {
+        left: 40%;
+    }
+    
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 49%;
+    }
+
+    .row .col-md-50 .title {
+        top: -15%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: block;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
+
+    header .navigation{
+        position: fixed;
+        flex-direction: column;
+        width: 40%;
+        height: 100vh;
+        top: 58px;
+        left: 0;
+        padding: 0;
+    }
+
+    header .navigation li{
+        margin: 20px;
+    }
+
+    header .navigation li button{
+        width: 100%;
+    }
+
+    #check:checked ~ul{
+        width: 0;
+        display: none;
+    }
+}
+
+@media (max-width: 425px){
+
+    header{
+        background-color: var(--hept-color);
+    }
+
+    header a, #menu{
+        font-size: 20px;
+    }
+
+    header .navigation{
+        background-color: var(--hept-color);
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Banner -- */
+
+    #banner{
+        padding: 0;
+        height: auto;
+    }
+
+    .banner{
+        margin: 35px auto;
+        flex-direction: column;
+    }
+
+    .left-banner, .right-banner{
+        width: 88%;
+    }
+
+    .banner-heading {
+        font-size: 27px;
+    }
+
+    .banner-heading span {
+        font-size: 25px;
+    }
+
+    .left-banner .banner-para{
+        font-size: 20px;
+        margin-bottom: 0;
+    }
+
+    .left-banner .banner-info {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .left-banner a .banner-visualize {
+        width: 60%;
+        height: 30px;
+        margin: -10px 0px 10px 0px;
+        font-size: 13px;
+    }
+
+    #mobile{
+        display: block;
+    }
+
+    .right-banner{
+        display: none;
+    }
+
+    /* -- Canvas -- */
+
+    .canva-container{
+        display: flex;
+        width: 85%;
+        min-height: 20vh;
+        max-height: max-content;
+        margin: 30px 10px;
+        background-color: var(--secondary-color);
+        justify-content: center;
+        align-items: baseline;
+        transition: all 2s ease;
+    }
+
+    .canva-para {
+        width: 100%;
+        margin: 5px auto;
+        font-size: 22px;
+        padding: 0px 20px;
+    }
+    
+    .canva-info{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+        justify-content: space-between;
+    }
+    
+    .canva-input {
+        margin: 5px 0px;
+        resize: none;
+        padding: 10px 6px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    #customElements{
+        height: 60px;
+    }
+    
+    #custom{
+        display: block;
+        margin: 5px auto;
+        padding: 6px 20px;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: var(--tertiary-color);
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        opacity: 0.8;
+        outline: none;
+    }
+
+    .bar{
+        background:var(--tertiary-color); 
+        width: 300px;
+        border: 1px solid var(--secondary-color);
+        transition: all 1s ease;
+    }
+
+
+    /* -- Algo Information -- */
+
+    .sort{
+        flex-direction: column;
+    }
+
+    .left, .right{
+        width: 85%;
+    }
+
+    .left p {
+        padding: 5px 0;
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 0px;
+    }
+
+    .left p .algo-more {
+        width: 60%;
+        height: 36px;
+    }
+
+    .hr-algo{
+        width: 80%;
+    }
+
+    hr{
+        height: 5px;
+        margin: 15px 0px;
+        background-color: var(--quaternary-color);
+    }
+
+    .left p span {
+        color: var(--tertiary-color);
+        padding: 0px 1px;
+    }
+
+    .frames{
+        width: 95%;
+    }
+
+    /* About Us*/
+
+    .testimonials .content .box .imgBox {
+        left: 70px;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 100%;
+    }
+
+    .row .col-md-50 .title {
+        top: -15%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: none;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+}
+
+@media (max-width: 375px){
+
+    /* Header */
+
+    header{
+        background-color: var(--hept-color);
+    }
+
+    header a, #menu{
+        font-size: 18px;
+    }
+
+    header .navigation{
+        position: fixed;
+        flex-direction: column;
+        width: 60%;
+        height: 100vh;
+        background-color: var(--hept-color);
+        top: 47px;
+        left: 0;
+        padding: 0;
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Banner -- */
+
+    #banner{
+        padding: 0;
+        height: auto;
+    }
+
+    .banner{
+        margin: 35px auto;
+        flex-direction: column;
+    }
+
+    .left-banner, .right-banner{
+        width: 88%;
+    }
+
+    .banner-heading {
+        font-size: 22px;
+    }
+
+    .banner-heading span {
+        font-size: 25px;
+    }
+
+    .left-banner .banner-para{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .left-banner .banner-info {
+        font-size: 14px;
+        line-height: 25px;
+    }
+
+    .left-banner a .banner-visualize {
+        width: 60%;
+        height: 30px;
+        margin: -10px 0px 10px 0px;
+        font-size: 13px;
+    }
+
+    #mobile{
+        display: block;
+    }
+
+    .right-banner{
+        display: none;
+    }
+
+      /* -- Canvas -- */
+
+      .canva-container{
+        display: flex;
+        width: 85%;
+        min-height: 20vh;
+        max-height: max-content;
+        margin: 30px 10px;
+        background-color: var(--secondary-color);
+        justify-content: center;
+        align-items: baseline;
+        transition: all 2s ease;
+    }
+
+    .canva-para {
+        width: 100%;
+        margin: 5px auto;
+        font-size: 20px;
+        padding: 0px 20px;
+    }
+    
+    .canva-info{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 20px auto;
+        justify-content: space-between;
+    }
+    
+    .canva-input {
+        margin: 5px 0px;
+        resize: none;
+        padding: 10px 6px;
+        font-size: 12px;
+        font-weight: 300;
+    }
+
+    #customElements{
+        height: 60px;
+    }
+    
+    #custom{
+        display: block;
+        margin: 5px auto;
+        padding: 6px 20px;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: var(--tertiary-color);
+        font-size: 15px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        opacity: 0.8;
+        outline: none;
+    }
+
+    .bar{
+        background:var(--tertiary-color); 
+        width: 300px;
+        border: 1px solid var(--secondary-color);
+        transition: all 1s ease;
+    }
+
+    /* About Us */
+
+    .testimonials .content .box .imgBox {
+        position: relative;
+        left: 60px;
+    }
+
+    /* -- Algo Information -- */
+
+    .sort{
+        flex-direction: column;
+    }
+
+    .left, .right{
+        width: 85%;
+    }
+
+    .left p {
+        padding: 5px 0;
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 0px;
+    }
+
+    .left p .algo-more {
+        width: 60%;
+        height: 36px;
+    }
+
+    .hr-algo{
+        width: 80%;
+    }
+
+    hr{
+        height: 5px;
+        margin: 15px 0px;
+        background-color: var(--quaternary-color);
+    }
+
+    .left p span {
+        color: var(--tertiary-color);
+        padding: 0px 1px;
+    }
+
+    .frames{
+        width: 90%;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 100%;
+    }
+
+    .row .col-md-50 .title {
+        top: -15%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: none;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
+}
+
+@media (max-width: 320px){
+
+    /* -- Header -- */
+
+    header{
+        background-color: var(--hept-color);
+    }
+    
+    header a, #menu{
+        font-size: 16px;
+    }
+
+    header .navigation{
+        position: fixed;
+        flex-direction: column;
+        width: 80%;
+        height: 100vh;
+        background: var(--hept-color);
+        top: 44px;
+        left: 0;
+        padding: 0;
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Banner -- */
+
+    #banner{
+        padding: 0;
+        height: auto;
+    }
+
+    .banner{
+        margin: 35px auto;
+        flex-direction: column;
+    }
+
+    .left-banner, .right-banner{
+        width: 88%;
+    }
+
+    .banner-heading {
+        font-size: 20px;
+    }
+
+    .banner-heading span {
+        font-size: 20px;
+    }
+
+    .left-banner .banner-para{
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+
+    .left-banner .banner-info {
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .left-banner a .banner-visualize {
+        width: 60%;
+        height: 30px;
+        margin: -10px 0px 10px 0px;
+        font-size: 13px;
+    }
+
+    #mobile{
+        display: block;
+    }
+
+    .right-banner{
+        display: none;
+    }
+
+    /* -- Canvas -- */
+
+    .canva-container{
+        display: flex;
+        width: 85%;
+        min-height: 50vh;
+        max-height: auto;
+        margin: 30px 10px;
+        background-color: var(--secondary-color);
+        justify-content: center;
+        align-items: baseline;
+        transition: all 2s ease;
+    }
+
+    .canva-para {
+        width: 100%;
+        margin: 5px auto;
+        font-size: 18px;
+        padding: 0px 20px;
+    }
+    
+    .canva-info{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 10px auto;
+        justify-content: space-between;
+    }
+    
+    .canva-input {
+        margin: 5px 0px;
+        resize: none;
+        padding: 10px 6px;
+        font-size: 12px;
+        font-weight: 300;
+        text-align: justify;
+    }
+
+    #customElements{
+        height: 60px;
+    }
+    
+    #custom{
+        display: block;
+        margin: 5px auto;
+        padding: 5px 15px;
+        color: var(--secondary-color);
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: var(--tertiary-color);
+        font-size: 12px;
+        font-weight: bold;
+        border: none;
+        border-radius: 25px;
+        opacity: 0.8;
+    }
+
+    .bar{
+        background:var(--tertiary-color); 
+        width: 300px;
+        border: 1px solid var(--secondary-color);
+        transition: all 1s ease;
+    }
+
+    /* -- Algo Information -- */
+
+    .sort{
+        flex-direction: column;
+    }
+
+    .left, .right{
+        width: 85%;
+    }
+
+    .left p {
+        padding: 5px 0;
+        font-size: 15px;
+        line-height: 25px;
+        margin-bottom: 0px;
+    }
+
+    .left p .algo-more {
+        width: 60%;
+        height: 36px;
+    }
+
+    .hr-algo{
+        width: 80%;
+    }
+
+    hr{
+        height: 5px;
+        margin: 15px 0px;
+        background-color: var(--quaternary-color);
+    }
+
+    .left p span {
+        color: var(--tertiary-color);
+        padding: 0px 1px;
+    }
+
+    .frames{
+        width: 85%;
+    }
+
+    /* About Us */
+
+    .testimonials .content .box .imgBox {
+        left: 40px;
+    }
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 100%;
+    }
+
+    .row .col-md-50 .title {
+        top: -12%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: none;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
+    /* Copyright */
+
+    .copyright p {
+        font-size: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+
+}

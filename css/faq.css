@@ -1,0 +1,940 @@
+/* --------------- This is the CSS File containing all the styling contents of the webpage 'index.html' ----------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* ------------------------------- CSS Variables for toggling between Dark Mode and Light Mode ------------------------ */
+
+:root{
+    --primary-color: #fff;
+    --secondary-color: #111;
+    --tertiary-color: orange;
+    --quaternary-color: #16a085;
+    --pent-color: crimson;
+}
+
+.darktheme{
+    --primary-color: #111;
+    --secondary-color: #fff;
+    --tertiary-color: orange;
+    --quaternary-color: #16a085;
+    --pent-color: crimson;
+}
+
+section{
+    width: 90%;
+    margin: 30px auto;
+    padding: 20px 0px;
+}
+
+.body{
+    background-color: var(--primary-color);
+    transition: all 1s ease-in-out;
+}
+
+/* ---------------------------------------------Header Navigation Bar --------------------------------------------------*/
+
+header{
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgb(100 94 94 / 70%);
+}
+
+header a{
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header a:hover{
+    color: var(--secondary-color);
+}
+
+header span{
+    color: var(--tertiary-color);
+}
+
+header .navigation{
+    position: relative;
+    display: flex;
+}
+
+header .navigation li{
+    list-style: none;
+    margin-left: 30px;
+    font-size: 18px;
+}
+
+.navigation li .form-select{
+    outline: none;
+    cursor: pointer;
+}
+
+.navigation li .mode{
+    border: none;
+    padding: 10px;
+    background-color: var(--primary-color);
+}
+
+.navigation li .mode{
+    border: none;
+    padding: 10px;
+    color: var(--secondary-color);
+    background: none;
+}
+
+.btn.btn-outline-success{
+    background: #198754;
+    color: white;
+}
+
+#menu{
+    width: 30px;
+    font-size: 20px;
+    background-color: var(--primary-color);
+    display: none;
+}
+
+#check{
+    display: none;
+}
+
+/* ------------------------------------------ Vertical Fixed Navbar ----------------------------------------------------*/
+
+.vnav{
+    position: fixed;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.vnav ul{
+    margin: 0;
+    padding: 0;
+}
+
+.vnav ul li{
+    list-style: none;
+    margin: 5px 0;
+}
+
+.vnav ul li a{
+    width: 40px;
+    height: 40px;
+    line-height: 50px;
+    font-size: 25px;
+    color: var(--primary-color);
+    background: var(--quaternary-color);
+    display: block;
+    text-align: center;
+}
+
+.vnav ul li a span{
+    position: absolute;
+    right: 0;
+    width: 140px;
+    height: 50px;
+    color: var(--secondary-color);
+    background: var(--primary-color);
+    font-size: 20px;
+    font-weight: bold;
+    z-index: -1;
+    opacity: 0;
+    backface-visibility: hidden;
+    transition: 0.5s;
+    box-shadow: 0 4px 10px rgb(100 94 94 / 70%);
+}
+
+.vnav ul li:hover span{
+    z-index: 1000;
+    opacity: 1;
+    backface-visibility: visible;
+    right: 50px;
+}
+
+/* --------------------------------------------------- Accordian -------------------------------------------------------*/
+
+h2{
+	text-align: center;
+	padding: 20px;
+	font-size: 2.5rem;
+    color: var(--secondary-color);
+}
+
+h3{
+    color: var(--secondary-color);
+	padding: 20px;
+	padding-left: 0px;
+}
+ 
+.faq{
+    color: var(--secondary-color);
+	font-size: 20px;
+}
+
+.accordion {
+	width: 90%;
+	max-width: 1000px;
+	margin: 2rem auto;
+}
+  
+.accordion-item {
+	background-color: var(--primary-color);
+	color: #111;
+	margin: 1rem 0;
+	border-radius: 0.5rem;
+	box-shadow: 0 2px 5px 0 rgba(0,0,0,0.25);
+}
+
+.accordion-item-header {
+	padding: 0.5rem 3rem 0.5rem 1rem;
+	min-height: 3.5rem;
+	line-height: 1.25rem;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+	position: relative;
+	cursor: pointer;
+}
+  
+.accordion-item-header::after {
+	content: "\002B";
+	font-size: 2rem;
+	position: absolute;
+	right: 1rem;
+}
+  
+.accordion-item-header.active::after {
+	content: "\2212";
+}
+
+.accordion-item-body {
+	max-height: 0;
+	overflow: hidden;
+	transition: max-height 0.2s ease-out;
+}
+  
+.accordion-item-body-content {
+	padding: 1rem;
+	line-height: 1.5rem;
+	border-top: 1px solid;
+	border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+}
+
+/* --------------------------------------------------- Contact Us ------------------------------------------------------*/
+
+.contact{
+    background-color: whitesmoke;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    height: 90%;
+}
+
+.row .col-md-50{
+    position: relative;
+    top: 3%;
+    width: 46%;
+    margin: 30px 20px;
+}
+
+.row .col-md-50 .title{
+    position: relative;
+    top: -12%;
+    left: 22%;
+    width: 50%;
+    height: 15%;
+    background-color: rgb(187, 187, 187);
+    color: var(--primary-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+}
+
+.row .col-md-50 img{
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+.contact .title .titleText{
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+    color: #111;
+}
+
+.contact .title .titleText span{
+    color: crimson;
+}
+
+.contact .title p{
+    font-family: 'Cookie', cursive;
+    font-style: italic;
+    letter-spacing: 0.2px;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+.contactForm{
+    padding: 30px 40px;
+    background: var(--primary-color);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+    max-width: 100%;
+    max-height: fit-content;
+    border-radius: 7px;
+    margin: 30px 15px;
+}
+
+.contactForm h3{
+    color: var(--secondary-color);
+    font-size: 1.2em;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.contactForm .inputBox input, textarea{
+    width: 100%;
+    border: 1px solid #255;
+    padding: 10px;
+    color: var(--secondary-color);
+    resize: none;
+}
+
+.contactForm .inputBox textarea{
+    resize: none;
+}
+
+.contactForm .inputBox select{
+    width: 50%;
+    border: 1px solid #255;
+    padding: 10px;
+    color: var(--secondary-color);
+}
+
+.contact .row .contactForm .btn{
+    font-size: 20px;
+    color: var(--primary-color);
+    background: #ff0157;
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.5s ease-in;
+    text-decoration: none;
+}
+
+.title
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .title .titleText{
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 15px;
+}
+
+.contact .title .titleText span{
+    color: #d6054b;
+}
+
+/* --------------------------------------------------- Copyright ------------------------------------------------------*/
+
+.copyright{
+    height: fit-content;
+    padding: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.copyright p{
+    font-weight: bold;
+    color: #333;
+}
+
+.copyright a{
+    color: #ff0157;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+@media (max-width: 1440px){
+
+    section{
+        height: auto;
+    }
+
+    section .faq{
+        font-size: 18px;
+        line-height: 20px;
+        text-align: justify;
+        width: 95%;
+    }
+}
+
+@media (max-width: 1030px){
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    header{
+        align-items: center;
+    }
+
+    header a, #menu{
+        font-size: 20px;
+    }
+
+    header .navigation {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    /* -- Accordian -- */
+
+    section{
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    section h2{
+        font-size: 18px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .accordion .accordion-item{
+        width: 100%;
+        margin: 20px 3px;
+    }
+
+    .accordion .accordion-item .accordion-item-header{
+        padding: 5px 45px 5px 5px;
+        font-size: 10px;
+    }
+
+    .accordion .accordion-item-body-content{
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    section h3{
+        padding: 10px 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    section .faq{
+        font-size: 12px;
+        line-height: 20px;
+        text-align: justify;
+        width: 95%;
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 49%;
+    }
+
+    .row .col-md-50 .title {
+        top: -12%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: block;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
+    /* Copyright */
+
+    .copyright p {
+        font-size: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+}
+
+@media (max-width: 425px){
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header a, #menu{
+        font-size: 20px;
+    }
+
+    header .navigation {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    /* -- Accordian -- */
+
+    section{
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    section h2{
+        font-size: 15px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .accordion .accordion-item{
+        width: 90%;
+        margin: 20px 3px;
+    }
+
+    .accordion .accordion-item .accordion-item-header{
+        padding: 5px 45px 5px 5px;
+        font-size: 10px;
+    }
+
+    .accordion .accordion-item-body-content{
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    section h3{
+        padding: 10px 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    section .faq{
+        font-size: 12px;
+        line-height: 20px;
+        text-align: justify;
+        width: 90%;
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 100%;
+    }
+
+    .row .col-md-50 .title {
+        top: -12%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: none;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
+    /* Copyright */
+
+    .copyright p {
+        font-size: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+}
+
+@media (max-width: 375px){
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header a, #menu{
+        font-size: 20px;
+    }
+
+    header .navigation {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    /* -- Accordian -- */
+
+    section{
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    section h2{
+        font-size: 15px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .accordion .accordion-item{
+        width: 90%;
+        margin: 20px 3px;
+    }
+
+    .accordion .accordion-item .accordion-item-header{
+        padding: 5px 45px 5px 5px;
+        font-size: 10px;
+    }
+
+    .accordion .accordion-item-body-content{
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    section h3{
+        padding: 10px 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    section .faq{
+        font-size: 12px;
+        line-height: 20px;
+        text-align: justify;
+        width: 90%;
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 100%;
+    }
+
+    .row .col-md-50 .title {
+        top: -12%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: none;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
+    /* Copyright */
+
+    .copyright p {
+        font-size: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+}
+
+@media (max-width: 320px){
+
+    header{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header a, #menu{
+        font-size: 20px;
+    }
+
+    header .navigation {
+        margin-top: 10px;
+        margin-bottom: 0px;
+        padding-left: 0px;
+    }
+
+    /* -- Accordian -- */
+
+    section{
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    section h2{
+        font-size: 15px;
+        font-weight: bold;
+        padding: 0;
+    }
+
+    .accordion .accordion-item{
+        width: 90%;
+        margin: 20px 3px;
+    }
+
+    .accordion .accordion-item .accordion-item-header{
+        padding: 5px 45px 5px 5px;
+        font-size: 10px;
+    }
+
+    .accordion .accordion-item-body-content{
+        padding: 8px;
+        font-size: 10px;
+    }
+
+    section h3{
+        padding: 10px 0px;
+        font-size: 18px;
+        text-align: center;
+    }
+
+    section .faq{
+        font-size: 12px;
+        line-height: 20px;
+        text-align: justify;
+        width: 80%;
+    }
+
+    /* -- Vertical Navbar -- */
+
+    .vnav ul li a {
+        width: 25px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 15px;
+    }
+
+    .vnav ul li a span {
+        width: 100px;
+        height: 30px;
+        font-size: 15px;
+    }
+
+    /* -- Contact -- */
+
+    #contact{
+        height: auto;
+        margin: 0 auto;
+        padding: 20px auto;
+    }
+
+    .contact .title .titleText {
+        padding: 5px;
+    }
+
+    .contact .title p {
+        font-size: 22px;
+    }
+
+    .row{
+        padding: 0px 20px;
+    }
+
+    .row .col-md-50{
+        width: 100%;
+    }
+
+    .row .col-md-50 .title {
+        top: -12%;
+        left: 15%;
+        width: 70%;
+        height: 15%;
+        padding: 0px 30px;
+    }
+
+    .row #contact-img{
+        display: none;
+    }
+
+    .contact .row .contactForm .btn {
+        font-size: 15px;
+        padding: 5px 15px;
+        border-radius: 15px;
+    }
+
+    /* Copyright */
+
+    .copyright p {
+        font-size: 10px;
+        font-weight: bold;
+        color: #333;
+    }
+
+}
