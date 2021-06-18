@@ -346,6 +346,7 @@ header .navigation li{
     padding: 10px 15px;
     font-size: 18px;
     font-weight: 300;
+    color: #111;
 }
 
 #custom{
@@ -436,7 +437,7 @@ header .navigation li{
     background-color: var(--oct-color);
     border-radius: 25px;
     text-align: center;
-    color: var(--primary-color);
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
     letter-spacing: 1.5px;
@@ -510,7 +511,7 @@ h2{
     letter-spacing: 1.5px;
 }
 
-.main-info{
+.sort .left .main-info{
     color: var(--secondary-color);
 }
 
@@ -534,7 +535,7 @@ h2{
     background-color: var(--quaternary-color);
     border-radius: 25px;
     text-align: center;
-    color: var(--primary-color);
+    color: #fff;
     font-weight: bold;
     cursor: pointer;
     letter-spacing: 2px;
@@ -1547,6 +1548,10 @@ h2{
 @media (max-width: 320px){
 
     /* -- Header -- */
+
+    header{
+        background-color: var(--hept-color);
+    }
     
     header a, #menu{
         font-size: 16px;
@@ -1557,7 +1562,7 @@ h2{
         flex-direction: column;
         width: 80%;
         height: 100vh;
-        background-color: var(--dec-color);
+        background: var(--hept-color);
         top: 44px;
         left: 0;
         padding: 0;
