@@ -1,7 +1,6 @@
 async function partitionArray(ele, l, h){
 
     let i = l - 1;
-    
     ele[h].style.background = 'red'; // pivot element
     
     for(let j = l; j <= h - 1; j++){
@@ -67,5 +66,3 @@ async function QuickSort(ele, l, h){
     onNavBarSize.disabled = false;
     onCustomSize.disabled = false;
 }
-
-
