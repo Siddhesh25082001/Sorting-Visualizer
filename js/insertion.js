@@ -36,6 +36,5 @@ async function InsertionSort() {
         await wait(delay);
     }
     onNavBarSize.disabled = false;
+    onCustomSize.disabled = false;
 }
-
-
