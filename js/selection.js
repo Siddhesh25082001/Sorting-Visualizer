@@ -29,4 +29,5 @@ async function SelectionSort() {
     ele[ele.length - 1].style.background = 'chartreuse'; 
 
     onNavBarSize.disabled = false;
+    onCustomSize.disabled = false;
 }
