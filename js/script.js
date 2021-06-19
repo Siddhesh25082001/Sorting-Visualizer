@@ -26,6 +26,64 @@ $(window).on('load', function(){
     $('.header').removeClass('gayab');
 })
 
+function sortname(){
+   var sortname = document.getElementById('sortname').value
+
+   if(sortname == 'notSelected'){
+        $('#1').remove()
+        $('#2').remove()
+        $('#3').remove()
+        $('#4').remove()
+        $('#5').remove()
+        $('#notSelected').append()
+   }
+   
+   if(sortname == '1'){
+       $('#notSelected').remove()
+       $('#2').remove()
+       $('#3').remove()
+       $('#4').remove()
+       $('#5').remove()
+       $('#1').append()
+   }
+   
+   if(sortname == '2'){
+        $('#notSelected').remove()
+        $('#1').remove()
+        $('#3').remove()
+        $('#4').remove()
+        $('#5').remove()
+        $('#2').append()
+   }
+   
+   if(sortname == '3'){
+        $('#notSelected').remove()
+        $('#1').remove()
+        $('#2').remove()
+        $('#4').remove()
+        $('#5').remove()
+        $('#3').append()
+   }
+   
+   if(sortname == '4'){
+        $('#notSelected').remove()
+        $('#1').remove()
+        $('#2').remove()
+        $('#3').remove()
+        $('#5').remove()
+        $('#4').append()
+   }
+   
+   if(sortname == '5'){
+        $('#notSelected').remove()
+        $('#1').remove()
+        $('#2').remove()
+        $('#3').remove()
+        $('#4').remove()
+        $('#5').append()
+   }
+   
+}
 
 
 
