@@ -555,15 +555,10 @@ h3{
         font-size: 15px;
     }
 
-    header{
-        flex-direction: column;
-        align-items: center;
-    }
-
     header a, #menu{
-        font-size: 20px;
+        font-size: 15px;
     }
-
+    
     header .navigation {
         margin-top: 10px;
         margin-bottom: 0px;
@@ -692,14 +687,10 @@ h3{
         font-size: 15px;
     }
 
-    header{
-        flex-direction: column;
-        align-items: center;
+    header a, #menu{
+        font-size: 15px;
     }
 
-    header a, #menu{
-        font-size: 20px;
-    }
 
     header .navigation {
         margin-top: 10px;
@@ -816,13 +807,8 @@ h3{
 
 @media (max-width: 320px){
 
-    header{
-        flex-direction: column;
-        align-items: center;
-    }
-
     header a, #menu{
-        font-size: 20px;
+        font-size: 15px;
     }
 
     header .navigation {
