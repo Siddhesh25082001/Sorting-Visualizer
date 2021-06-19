@@ -22,9 +22,7 @@ async function BubbleSort() {
         ele[ele.length-1-i].style.background = 'chartreuse'; // Last sorted element becoming chartreuse
     }
     ele[0].style.background = 'chartreuse'; // first sorted element to make chartreuse as it is the only left at last.
+    
     onNavBarSize.disabled = false;
+    onCustomSize.disabled = false;
 }
-
-
-
-
