@@ -18,6 +18,7 @@ onNavBarSize.addEventListener("click", function(){
         createNewArray(arraySize,array); 
 
         onNavBarSize.disabled = true;
+        onCustomSize.disabled = true;
     }
 });
 
@@ -46,6 +47,8 @@ onCustomSize.addEventListener("click",function(){
         else{
             createNewArray(arraySize,array);
         }
+        onCustomSize.disabled = true;
+        onNavBarSize.disabled = true;
     }
 });
 
