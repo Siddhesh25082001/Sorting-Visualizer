@@ -102,4 +102,3 @@ async function MergeSort(ele, l, h){
     onNavBarSize.disabled = false;
     onCustomSize.disabled = false;
 }
-
