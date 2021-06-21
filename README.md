@@ -19,6 +19,10 @@ https://siddhesh25082001.github.io/Sorting-Visualizer/
 
 ![Algo_info](https://user-images.githubusercontent.com/67231450/122681812-cb2f0500-d213-11eb-9d4f-b5eda5df5c25.JPG)
 
+#### Custom Input feature to enter custom size and size number of elements
+
+![Custom_input](https://user-images.githubusercontent.com/67231450/122765200-e48c8b80-d2bd-11eb-8e41-03f5981c87a6.JPG)
+
 ![Sort-1](https://user-images.githubusercontent.com/67231450/122681822-d4b86d00-d213-11eb-92f5-60d8699e55e8.JPG)
 
 ![Sort-2](https://user-images.githubusercontent.com/67231450/122681829-dda93e80-d213-11eb-83df-c7db38b1a6aa.JPG)
@@ -37,4 +41,4 @@ https://siddhesh25082001.github.io/Sorting-Visualizer/
 ![Mobile](https://user-images.githubusercontent.com/67231450/122681899-2660f780-d214-11eb-821a-570b9c68da70.JPG)
 
 ##### Visit it and Explore !!!
-##### #Visualize to Materialize 
+### #Visualize to Materialize 
