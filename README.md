@@ -2,8 +2,8 @@
 
 This is a website to visualize classical sorting algorithms namely Bubble Sort, Insertion Sort, Selection Sort, Merge Sort and Quick Sort. The entire project is built using HTML, CSS, Bootstrap and JavaScript
 
-The website is hosted on the github pages and can be accessed by:
-https://siddhesh25082001.github.io/Sorting-Visualizer/
+The website is hosted on the Netlify website and can be accessed by:
+https://siddhesh-sort-visualizer.netlify.app/
 
 #### Features of the Project: 
 1. Actual Visualize how sorting algorithms works.
