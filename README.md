@@ -1,7 +1,7 @@
 # Sorting-Visualizer
 
 - Sorting Visualizer is a website to visualize classical sorting algorithms namely Bubble Sort, Insertion Sort, Selection Sort, Merge Sort and Quick Sort. The entire project is built using HTML, CSS, Bootstrap and JavaScript
-- The website is hosted on the Netlify website and can be accessed by: https://siddhesh-sort-visualizer.netlify.app/
+- The website is hosted on the Netlify website and can be accessed by: [**Netlify Live**](https://siddhesh-sort-visualizer.netlify.app/)
 
 ---
 
